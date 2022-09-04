@@ -43,7 +43,7 @@
                                 </select>
                             </div>
 
-                            <div class="col-span 12">
+                            <div class="col-span-12">
                                 <button type="submit" class="btn btn-primary rounded px-10">Save</button>
                             </div>
                         </div>
