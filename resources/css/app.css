@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.banner {
+    @apply py-5;
+}
+.banner.success {
+    @apply bg-emerald-500 text-white;
+}
+.banner.error {
+    @apply bg-red-400 text-white;
+}
+.banner.warning {
+    @apply bg-yellow-400 text-gray-900;
+}

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\RackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +24,13 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::get('racks', [RackController::class, 'index'])->name('racks.index');
+
+Route::get('files', [FileController::class, 'index'])->name('files.index');
+Route::get('files/create', [FileController::class, 'create'])->name('files.create');
+Route::post('files', [FileController::class, 'store'])->name('files.store');
+Route::get('files/{file}/edit', [FileController::class, 'edit'])->name('files.edit');
+Route::put('files/{file}', [FileController::class, 'update'])->name('files.update');
+Route::delete('files/{file}', [FileController::class, 'destroy'])->name('files.destroy');
